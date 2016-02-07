@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NLP Demos</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css"> 
+              
+
+        <style type="text/css">
+            body {
+              height:auto;
+              background: #479592; /* Old browsers */
+              background: -moz-radial-gradient(center, ellipse cover, #479592 0%, #2B413D 100%); /* FF3.6-15 */
+              background: -webkit-radial-gradient(center, ellipse cover, #479592 0%,#2B413D 100%); /* Chrome10-25,Safari5.1-6 */
+              background: radial-gradient(ellipse at center, #479592 0%,#2B413D 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#479592', endColorstr='#2B413D',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+            }
+            body > .grid {
+              height: 100%;
+            }
+
+            .container{
+              margin:5rem;
+            }
+            .container h2,h3 {
+              text-align: center;
+              color:white;
+            }
+
+            footer {
+              position: fixed;
+              background-color:black;
+              width:100%;
+              height:2rem;
+              bottom:0;
+              color:white;
+              text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+      <div class="container center aligned">
+        <div class="ui grid">
+          <div class="row">
+            <div class="sixteen wide column">
+              <h2>Hobbs Algorithm Demos</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="two wide column"></div>
+            <div class="twelve wide column">
+              <div class="ui secondary segment">
+                <form class="ui large form" action="." method="post" enctype="multipart/form-data">
+                  <div class="ui stacked segment">
+                    {% csrf_token %}
+                    <p>{{ form.non_field_errors }}</p>
+
+                    <!--<div class="field">
+                        <label>{{ form.text.label_tag }} {{ form.text.help_text }}</label>
+                        <p>
+                          {{ form.text.errors }}
+                          {{ form.text }}
+                      </p> 
+                    </div>
+                    <div class="ui horizontal divider">
+                      Or
+                    </div>-->
+                    <p><a href="/media/documents/demosents.txt">Example Parsee Tree File</a></p>
+                    <div class="eight wide field">                          
+                      <label>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</label>
+                      <p>
+                        {{ form.docfile.errors }}
+                        {{ form.docfile }}
+                      </p> 
+                    </div>
+                    <hr>
+                    <div class="six wide field">
+                      <label>{{ form.pronoun.label_tag }} {{ form.pronoun.help_text }}</label>
+                      <p>
+                          {{ form.pronoun.errors }}
+                          {{ form.pronoun }}
+                      </p>
+                    </div>                
+                                             
+                      
+                    <input type="submit" value="submit" class="ui fluid large teal submit button">
+                  </div>
+                </form>
+                {% if pronoun %}     
+                    
+                  
+                    <h4>Proposed Antecedant Pronoun for {{ pronoun }} is {{ noun }}</h4>
+                {% endif %}
+              </div> 
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <footer> Made by Saptak Sengupta </footer>
+    </body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js"></script>    
+</html>
+
+
+
+

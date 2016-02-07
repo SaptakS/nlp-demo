@@ -1,0 +1,1 @@
+(ROOT (S (NP (NNP Ram)) (VP (VBZ is) (NP  (NP (DT a) (NN student)) (PP (IN of)(NP (NNP IIIT) (NNP Allahabad)))))  (. .))) (ROOT (S (NP (PRP He))(VP (VBZ is)  (PP (IN in)(NP (JJ 3rd) (NN year)))) (. .)))
