@@ -10,7 +10,7 @@ from myproject.myapp.models import Document
 from myproject.myapp.forms import *
 
 import os
-import pronoun.hobbsCalc as hp
+import algorithms.pronoun.hobbs.hobbsCalc as hp
 
 
 def home(request):    
